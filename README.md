@@ -1,4 +1,4 @@
-# frontend
+# Be The Hero - VueJs
 
 ## Project setup
 ```
