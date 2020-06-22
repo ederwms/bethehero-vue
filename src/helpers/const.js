@@ -1,5 +1,5 @@
 const API_HOST = () => {
-  return 'http://localhost:3333'
+  return process.env.VUE_APP_API_URL
 }
 
 const API_URL = `${API_HOST()}/api`
