@@ -1,6 +1,6 @@
-<h1 align="center">
+<p align="center">
   <img alt="Logo - Be The Hero" src="src/assets/logo.svg">
-</h1>
+</p>
 
 <h1 align="center">
   Be The Hero - VueJS
