@@ -43,7 +43,10 @@ export default {
           }
         })
         .catch((e) => {
-          console.log(e)
+          this.addToast({
+            text: e.message,
+            type: 'danger'
+          })
         })
     }
   }
