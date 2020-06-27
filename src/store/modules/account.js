@@ -30,6 +30,15 @@ const actions = {
       .catch((e) => {
         return Promise.reject(e.response.data)
       })
+  },
+  actionRegister (_, params) {
+    return accountApi.register(params)
+      .then((response) => {
+        return Promise.resolve(response.data)
+      })
+      .catch((e) => {
+        return Promise.reject(e.response.data)
+      })
   }
 }
 

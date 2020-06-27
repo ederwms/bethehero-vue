@@ -5,5 +5,8 @@ import Const from '@/helpers/const'
 export default {
   signIn (id) {
     return axios.post(`${Const.API_SESSION}`, { id })
+  },
+  register (ong) {
+    return axios.post(`${Const.API_ONGS}`, ong)
   }
 }

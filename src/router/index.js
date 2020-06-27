@@ -5,6 +5,7 @@ import {
   Public,
   Private,
   Login,
+  Register,
   Home,
   NewIncident
 } from '@/pages'
@@ -33,6 +34,11 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login
+      },
+      {
+        path: '/register',
+        name: 'Register',
+        component: Register
       }
     ]
   },

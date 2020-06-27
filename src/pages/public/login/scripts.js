@@ -1,7 +1,12 @@
 import { mapActions, mapMutations } from 'vuex'
 import { ADD_TOAST_MESSAGE } from 'vuex-toast'
 
+import { LogInIcon } from 'vue-feather-icons'
+
 export default {
+  components: {
+    LogInIcon
+  },
   data () {
     return {
       ongId: ''
