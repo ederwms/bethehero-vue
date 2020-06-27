@@ -1,24 +1,28 @@
-# Be The Hero - VueJs
+<p align="center">
+  <img alt="Logo - Be The Hero" src="src/assets/logo.svg">
+</p>
 
-## Project setup
-```
-yarn install
-```
+<h1 align="center">
+  Be The Hero - VueJS
+</h1>
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+<p align="center">
+  Projeto construído com o intuito de conectar ONGs a pessoas que tem disponibilidade em ajudar.
+</p>
 
-### Compiles and minifies for production
-```
-yarn build
-```
+<p align="center">
+  Este projeto é uma reprodução do frontend da aplicação desenvolvida durante a 11ª edição da Semana Omnistack, promovida pela Rocketseat, utilizando a VueJS.
+</p>
 
-### Lints and fixes files
-```
-yarn lint
-```
+# Rodando a aplicação
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Execute o comando ```npm install``` na raiz do projeto.
+
+Para rodar a versão web, execute ```npm start``` na raiz do projeto.
+
+**&copy;** [Rocketseat](https://rocketseat.com.br/)
+
+### Licença
+[MIT](https://github.com/ederwms/bethehero-vue/blob/master/LICENSE)
+
+Desenvolvido por [Éder Sousa](https://github.com/ederwms)

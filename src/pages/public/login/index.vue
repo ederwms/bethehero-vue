@@ -28,6 +28,19 @@
         >
           Entrar
         </button>
+
+        <router-link
+          class="register-button"
+          to="/register"
+        >
+          <log-in-icon
+            class="register-button-icon"
+            size="18"
+            color="#e02041"
+          />
+
+          Não tenho cadastro
+        </router-link>
       </div>
     </section>
 
