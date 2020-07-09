@@ -8,7 +8,7 @@
       >
 
       <span class="welcome-text">
-        Bem Vindo, {{ getterAccount }}
+        Bem Vindo, {{ getterAccount.name }}
       </span>
     </div>
 

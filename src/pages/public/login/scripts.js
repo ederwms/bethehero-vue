@@ -25,9 +25,7 @@ export default {
     ]),
     signIn () {
       this.actionSignIn(this.ongId)
-        .then((response) => {
-          this.SET_ACCOUNT(response.name)
-
+        .then(() => {
           this.$router.push({ name: 'Home' })
         })
         .catch((e) => {
