@@ -1,4 +1,5 @@
 import accountApi from '@/api/account'
+import jwtDecode from 'jwt-decode'
 
 export const SET_ACCOUNT = 'SET_ACCOUNT'
 export const CLEAR_ACCOUNT = 'CLEAR_ACCOUNT'
@@ -11,20 +12,23 @@ const getters = {
 }
 const mutations = {
   [SET_ACCOUNT] (state, values) {
-    localStorage.setItem('user-id', values)
+    localStorage.setItem('access-token', values.token)
 
-    state.account = values
+    const decoded = jwtDecode(values.token)
+
+    state.account = decoded
   },
   [CLEAR_ACCOUNT] (state) {
-    localStorage.removeItem('user-id')
+    localStorage.removeItem('access-token')
 
     state.account = {}
   }
 }
 const actions = {
-  actionSignIn (_, id) {
+  actionSignIn ({ commit }, id) {
     return accountApi.signIn(id)
       .then((response) => {
+        commit('SET_ACCOUNT', response.data)
         return Promise.resolve(response.data)
       })
       .catch((e) => {
