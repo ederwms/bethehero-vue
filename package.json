@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "postinstall": "npm run build",
+    "postinstall": "yarn build",
     "start": "node server.js"
   },
   "dependencies": {
