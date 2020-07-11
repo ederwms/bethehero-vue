@@ -15,7 +15,7 @@
 
 # Link
 
-https://hlg-bthvue.netlify.app/
+https://be-the-hero-vue.netlify.app/
 
 <h4>
   Melhorias:
