@@ -7,10 +7,12 @@ import 'vuex-toast/dist/vuex-toast.css'
 
 import Account from '@/store/modules/account'
 import Incidents from '@/store/modules/incident'
+import * as actions from './modules/clearStorage'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  actions,
   modules: {
     Account,
     Incidents,

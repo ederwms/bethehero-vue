@@ -21,10 +21,17 @@
       </button>
 
       <button
-        class="button-logout"
+        class="small-btn register-incident-small-btn"
+        @click="$router.push({ name: 'NewIncident' })"
+      >
+        <plus-icon size="20" />
+      </button>
+
+      <button
+        class="small-btn logout"
         @click="logout()"
       >
-        <power-icon size="18" />
+        <power-icon size="20" />
       </button>
     </div>
   </header>

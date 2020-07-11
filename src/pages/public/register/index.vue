@@ -1,5 +1,7 @@
 <template>
   <div class="register-container">
+    <heroLoading :is-loading-on="isLoading" />
+
     <div class="register-content">
       <section>
         <img

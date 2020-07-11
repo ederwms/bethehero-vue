@@ -1,15 +1,19 @@
 import { mapActions, mapMutations } from 'vuex'
 import { ADD_TOAST_MESSAGE } from 'vuex-toast'
 
+import HeroLoading from '@/components/loading'
+
 import { LogInIcon } from 'vue-feather-icons'
 
 export default {
   components: {
+    HeroLoading,
     LogInIcon
   },
   data () {
     return {
-      ongId: ''
+      ongId: '',
+      isLoading: false
     }
   },
   methods: {
@@ -24,6 +28,8 @@ export default {
       'actionSignIn'
     ]),
     signIn () {
+      this.isLoading = true
+
       this.actionSignIn(this.ongId)
         .then(() => {
           this.$router.push({ name: 'Home' })
@@ -33,6 +39,9 @@ export default {
             text: e.message,
             type: 'danger'
           })
+        })
+        .finally(() => {
+          this.isLoading = false
         })
     }
   }

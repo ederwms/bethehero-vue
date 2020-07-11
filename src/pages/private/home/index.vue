@@ -1,11 +1,15 @@
 <template>
   <div class="home-container">
+    <heroLoading :is-loading-on="isLoading" />
     <heroHeader />
 
     <div
       class="home-body"
     >
-      <h1 class="body-title">
+      <h1
+        v-if="getterIncidents.length > 0"
+        class="body-title"
+      >
         Casos Cadastrados
       </h1>
 

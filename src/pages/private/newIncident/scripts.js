@@ -1,17 +1,21 @@
 import { mapGetters, mapActions } from 'vuex'
 import { ADD_TOAST_MESSAGE } from 'vuex-toast'
 
+import HeroLoading from '@/components/loading'
+
 import { ArrowLeftIcon } from 'vue-feather-icons'
 
 export default {
   components: {
+    HeroLoading,
     ArrowLeftIcon
   },
   data () {
     return {
       title: '',
       description: '',
-      value: null
+      value: null,
+      isLoading: false
     }
   },
   computed: {
@@ -27,6 +31,8 @@ export default {
       addToast: ADD_TOAST_MESSAGE
     }),
     createIncident (e) {
+      this.isLoading = true
+
       e.preventDefault()
 
       const incident = {
@@ -51,6 +57,9 @@ export default {
             text: e.message,
             type: 'danger'
           })
+        })
+        .finally(() => {
+          this.isLoading = false
         })
     },
     clearFields () {

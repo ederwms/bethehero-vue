@@ -2,10 +2,13 @@ import { mapActions } from 'vuex'
 import { ADD_TOAST_MESSAGE } from 'vuex-toast'
 import { mask } from 'vue-the-mask'
 
+import HeroLoading from '@/components/loading'
+
 import { ArrowLeftIcon } from 'vue-feather-icons'
 
 export default {
   components: {
+    HeroLoading,
     ArrowLeftIcon
   },
   directives: {
@@ -13,7 +16,7 @@ export default {
   },
   data () {
     return {
-      dado: 'Register',
+      isLoading: false,
       ong: {
         name: '',
         email: '',
@@ -31,6 +34,8 @@ export default {
       addToast: ADD_TOAST_MESSAGE
     }),
     registerOng (e) {
+      this.isLoading = true
+
       e.preventDefault()
 
       this.actionRegister(this.ong)
@@ -56,6 +61,9 @@ export default {
             text: e.message,
             type: 'danger'
           })
+        })
+        .finally(() => {
+          this.isLoading = false
         })
     }
   }

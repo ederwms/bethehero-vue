@@ -1,5 +1,7 @@
 <template>
   <div class="login-wrapper">
+    <heroLoading :is-loading-on="isLoading" />
+
     <section class="login-form">
       <img
         class="logo-img"

@@ -1,14 +1,14 @@
 import { mapGetters, mapMutations } from 'vuex'
 
-import { PowerIcon } from 'vue-feather-icons'
+import { PowerIcon, PlusIcon } from 'vue-feather-icons'
 
 export default {
   components: {
-    PowerIcon
+    PowerIcon,
+    PlusIcon
   },
   data () {
     return {
-      dado: ''
     }
   },
   computed: {

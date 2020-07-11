@@ -1,5 +1,7 @@
 <template>
   <div class="new-incident-container">
+    <heroLoading :is-loading-on="isLoading" />
+
     <div class="content">
       <section class="app-info">
         <img
