@@ -1,15 +1,22 @@
 import { mapActions } from 'vuex'
 import { ADD_TOAST_MESSAGE } from 'vuex-toast'
+import { mask } from 'vue-the-mask'
+
+import HeroLoading from '@/components/loading'
 
 import { ArrowLeftIcon } from 'vue-feather-icons'
 
 export default {
   components: {
+    HeroLoading,
     ArrowLeftIcon
+  },
+  directives: {
+    mask
   },
   data () {
     return {
-      dado: 'Register',
+      isLoading: false,
       ong: {
         name: '',
         email: '',
@@ -27,6 +34,8 @@ export default {
       addToast: ADD_TOAST_MESSAGE
     }),
     registerOng (e) {
+      this.isLoading = true
+
       e.preventDefault()
 
       this.actionRegister(this.ong)
@@ -37,7 +46,12 @@ export default {
               type: 'danger'
             })
           } else {
-            alert(`ONG Cadastrada com sucesso! ID: ${response.id}`)
+            this.addToast({
+              text: response.message,
+              type: 'success'
+            })
+
+            alert(`IMPORTANTE: Anote seu ID de acesso: ${response.id}`)
 
             this.$router.push({ name: 'Login' })
           }
@@ -47,6 +61,9 @@ export default {
             text: e.message,
             type: 'danger'
           })
+        })
+        .finally(() => {
+          this.isLoading = false
         })
     }
   }

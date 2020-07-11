@@ -1,6 +1,8 @@
 <template>
   <div class="register-container">
-    <div class="content">
+    <heroLoading :is-loading-on="isLoading" />
+
+    <div class="register-content">
       <section>
         <img
           src="../../../assets/logo.svg"
@@ -18,6 +20,7 @@
           <arrow-left-icon
             size="18"
             class="back-to-login-button-icon"
+            color="#e02041"
           />
 
           Voltar para o logon
@@ -38,6 +41,7 @@
 
         <input
           v-model="ong.whatsapp"
+          v-mask="'(##) # ####-####'"
           placeholder="WhatsApp"
         >
 
@@ -49,6 +53,7 @@
 
           <input
             v-model="ong.uf"
+            v-mask="'AA'"
             class="uf-input"
             placeholder="UF"
           >

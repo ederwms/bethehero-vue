@@ -1,29 +1,56 @@
 <template>
   <div class="home-container">
+    <heroLoading :is-loading-on="isLoading" />
     <heroHeader />
 
     <div
       class="home-body"
     >
-      <h1 class="body-title">
+      <h1
+        v-if="getterIncidents.length > 0"
+        class="body-title"
+      >
         Casos Cadastrados
       </h1>
 
-      <div class="body-incidents">
+      <div
+        v-if="getterIncidents.length === 0"
+        class="no-items-found"
+      >
+        <img
+          class="not-found-image"
+          src="../../../assets/empty.svg"
+          alt="No items found"
+        >
+
+        <p class="not-found-title">
+          Nenhum caso encontrado
+        </p>
+
+        <p class="not-found-text">
+          Desculpe, ainda não existe nenhum caso cadastrado. Vamos cadastrar o primeiro?
+        </p>
+      </div>
+
+      <div
+        v-else
+        class="body-incidents"
+      >
         <div
-          v-for="(incident, index) in [1,2,3,4,5,6,7,8,9,10]"
+          v-for="(incident, index) in getterIncidents"
           :key="index"
           class="ong-profile-incident"
         >
-          <div class="incident-title">
+          <div class="title-wrapper">
             <div class="incident-title-text">
               <strong> Caso </strong>
-              <p> Título </p>
+              <p> {{ incident.title }} </p>
             </div>
 
             <button
               class="button-delete"
               type="button"
+              @click="deleteIncident(incident.idincident)"
             >
               <trash-2-icon
                 size="20"
@@ -32,13 +59,17 @@
             </button>
           </div>
 
-          <strong> Descrição </strong>
-          <p> Descrição </p>
+          <div class="description-wrapper">
+            <strong> Descrição </strong>
+            <p> {{ incident.description }} </p>
+          </div>
 
-          <strong> Valor </strong>
-          <p>
-            R$ 100,00
-          </p>
+          <div class="value-wrapper">
+            <strong> Valor </strong>
+            <p>
+              {{ incident.value.toLocaleString('pt-Br', { style: 'currency', currency: 'BRL' }) }}
+            </p>
+          </div>
         </div>
       </div>
     </div>

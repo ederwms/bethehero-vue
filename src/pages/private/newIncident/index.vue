@@ -1,5 +1,7 @@
 <template>
   <div class="new-incident-container">
+    <heroLoading :is-loading-on="isLoading" />
+
     <div class="content">
       <section class="app-info">
         <img
@@ -34,19 +36,25 @@
         class="incident-form"
       >
         <input
+          v-model="title"
           type="text"
           placeholder="Título do Caso"
         >
 
-        <textarea placeholder="Descrição do Caso" />
+        <textarea
+          v-model="description"
+          placeholder="Descrição do Caso"
+        />
 
         <input
-          type="text"
+          v-model="value"
+          type="number"
           placeholder="Valor em R$"
         >
 
         <button
           class="form-confirm"
+          @click="createIncident"
         >
           Cadastrar
         </button>
