@@ -10,34 +10,34 @@ Este projeto foi desenvolvido com a finalidade de aprofundar meus conhecimentos 
 
 **Aplicação disponível em:** https://be-the-hero-vue.netlify.app/
 
-## Melhorias:
+### Melhorias em relação ao [projeto original](https://github.com/ederwms/bethehero):
 - Site responsivo
 - Autenticação com JWT
 - Renovação automática de token com Axios Interceptors
 - Novo backend (NodeJS + MySQL): [Ir para repositório](https://github.com/ederwms/api-bethehero)
 
-## Features em progresso:
+### Features em progresso:
 - Opção para upload de imagens  no cadastro de novos casos.
 - Área para que o usuário entre em contato com a ONGs para ajudar. (implementada, no projeto original, somente no mobile)
 
-## Screenshots
+### Screenshots
 
-### Tela de login
+#### Tela de login
 <img alt="Login screen" src="src/assets/screenshots/login-bth.png">
 
-### Tela de cadastro
+#### Tela de cadastro
 <img alt="Register screen" src="src/assets/screenshots/cadastro-bth.png">
 
-### Listagem de casos (nenhum cadastrado)
+#### Listagem de casos (nenhum cadastrado)
 <img alt="Incident screen (empty)" src="src/assets/screenshots/incident-screen-empty.png">
 
-### Listagem de casos
+#### Listagem de casos
 <img alt="Incident screen" src="src/assets/screenshots/incident-screen-populated.png">
 
-### Cadastro de novo caso
+#### Cadastro de novo caso
 <img alt="New incident screen" src="src/assets/screenshots/new-incident-screen.png">
 
-## Mobile
+### Mobile
 <p align="center">
   <img alt="Login screen" src="src/assets/screenshots/mobile/login-bth-mobile.png">
 
