@@ -6,7 +6,7 @@
 
 Aplicação construída com o intuito de conectar ONGs a pessoas que tem disponibilidade em ajudar.
 
-Este projeto foi desenvolvido para fins de estudo. É uma reprodução do frontend da aplicação desenvolvida durante a 11ª edição da Semana Omnistack, promovida pela Rocketseat, utilizando a VueJS.
+Este projeto foi desenvolvido com a finalidade de aprofundar meus conhecimentos em VueJS. É uma reprodução do frontend da aplicação desenvolvida durante a 11ª edição da Semana Omnistack, promovida pela Rocketseat, construída utilizando a VueJS.
 
 **Aplicação disponível em:** https://be-the-hero-vue.netlify.app/
 
