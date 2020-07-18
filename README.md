@@ -10,15 +10,17 @@ Este projeto foi desenvolvido com a finalidade de aprofundar meus conhecimentos 
 
 **Aplicação disponível em:** https://betheherovue.netlify.app/
 
-### Melhorias em relação ao [projeto original](https://github.com/ederwms/bethehero):
+#### Melhorias em relação ao [projeto original](https://github.com/ederwms/bethehero):
 - Site responsivo
 - Autenticação com JWT
 - Renovação automática de token com Axios Interceptors
 - Novo backend (NodeJS + MySQL): [Ir para repositório](https://github.com/ederwms/api-bethehero)
 
-### Features em progresso:
+<!--
+#### Features em progresso:
 - Opção para upload de imagens  no cadastro de novos casos.
 - Área para que o usuário entre em contato com a ONGs para ajudar. (implementada, no projeto original, somente no mobile)
+-->
 
 ### Screenshots
 
