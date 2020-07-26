@@ -32,7 +32,7 @@ const actions = {
         return Promise.resolve(response.data)
       })
       .catch((e) => {
-        return Promise.reject(e.response.data)
+        return Promise.reject(e.data)
       })
   },
   actionRegister (_, params) {
@@ -41,7 +41,7 @@ const actions = {
         return Promise.resolve(response.data)
       })
       .catch((e) => {
-        return Promise.reject(e.response.data)
+        return Promise.reject(e.data)
       })
   }
 }

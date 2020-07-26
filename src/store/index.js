@@ -7,6 +7,7 @@ import 'vuex-toast/dist/vuex-toast.css'
 
 import Account from '@/store/modules/account'
 import Incidents from '@/store/modules/incident'
+import Files from '@/store/modules/file'
 import * as actions from './modules/clearStorage'
 
 Vue.use(Vuex)
@@ -16,6 +17,7 @@ export default new Vuex.Store({
   modules: {
     Account,
     Incidents,
+    Files,
     toast: createModule({
       dismissInterval: 5000
     })
