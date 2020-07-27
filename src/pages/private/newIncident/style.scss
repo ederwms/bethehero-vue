@@ -1,14 +1,14 @@
 div.new-incident-container { width: 100%; max-width: 1220px; height: 100%; margin: 0 auto;
   div.content { display: flex; justify-content: space-around; align-items: center; width: 100%; padding: 96px; background: #f0f0f5; box-shadow: 0 0 100px rgba(0, 0, 0, 0.1); border-radius: 8px;
-    @media all and (max-width: 768px) { flex-direction: column; }
+    @media all and (max-width: 768px) { flex-direction: column; padding: 96px 16px !important; }
     @media all and (max-width: 950px) { padding: 96px 32px; }
 
-    section.app-info { width: 100%; max-width: 350px;
-      h1.info-title { margin: 64px 0 32px; font-size: 32px; }
+    section.app-info { display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; max-width: 400px;
+      h1.info-title { width: 100%; margin: 64px 0 32px; font-size: 32px; }
 
       p.info-text { font-size: 18px; color: #737380; line-height: 32px; }
 
-      a.back-link { display: flex; justify-content: flex-start; align-items: center; cursor: pointer; margin-top: 40px; color: #41414d; font-size: 18px; text-decoration: none; font-weight: 500; transition: all 0.2s ease;
+      a.back-link { display: flex; justify-content: flex-start; align-items: center; width: 100%; cursor: pointer; margin-top: 40px; color: #41414d; font-size: 18px; text-decoration: none; font-weight: 500; transition: all 0.2s ease;
         &:hover { opacity: 0.8; }
 
         svg { margin-right: 8px; }

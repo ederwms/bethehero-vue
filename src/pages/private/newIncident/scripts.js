@@ -1,4 +1,4 @@
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions, mapMutations } from 'vuex'
 import { ADD_TOAST_MESSAGE } from 'vuex-toast'
 
 import HeroLoading from '@/components/loading'
@@ -21,6 +21,9 @@ export default {
       isLoading: false
     }
   },
+  mounted () {
+    this.CLEAR_FILE()
+  },
   computed: {
     ...mapGetters([
       'getterAccount',
@@ -32,6 +35,9 @@ export default {
       'actionCreateIncident',
       'actionCreateFile',
       'actionDeleteFile'
+    ]),
+    ...mapMutations([
+      'CLEAR_FILE'
     ]),
     ...mapActions({
       addToast: ADD_TOAST_MESSAGE
@@ -107,7 +113,7 @@ export default {
         description: this.description,
         value: parseFloat(parseFloat(this.value).toFixed(2)),
         idong: this.getterAccount.idong,
-        idfile: this.getterFile ? this.getterFile.id : null
+        idfile: this.getterFile.id ? this.getterFile.id : null
       }
 
       this.actionCreateIncident(incident)
