@@ -68,14 +68,12 @@ https://be-the-hero-vue.netlify.app/
   <img alt="Login screen" src="src/assets/screenshots/mobile/login-bth-mobile.png">
 
   <img alt="Register screen" src="src/assets/screenshots/mobile/cadastro-bth-mobile.png">
+  
+  <img alt="Incident screen (empty)" src="src/assets/screenshots/mobile/incident-screen-empty-mobile.png">
 
   <img alt="Incident screen" src="src/assets/screenshots/mobile/incident-screen-populated-mobile.png">
-</p>
-
-<p align="center">
+  
   <img alt="New incident screen" src="src/assets/screenshots/mobile/new-incident-screen-mobile.png">
-
-  <img alt="Incident screen (empty)" src="src/assets/screenshots/mobile/incident-screen-empty-mobile.png">
 </p>
 
 **&copy;** [Rocketseat](https://rocketseat.com.br/)
