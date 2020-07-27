@@ -20,7 +20,13 @@ const mutations = {
     state.file = values
   },
   [CLEAR_FILE] (state) {
-    state.file = {}
+    state.file = {
+      id: null,
+      key: '',
+      name: '',
+      size: null,
+      url: ''
+    }
   }
 }
 const actions = {

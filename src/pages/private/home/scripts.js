@@ -1,21 +1,26 @@
 import { mapActions, mapGetters } from 'vuex'
 import { ADD_TOAST_MESSAGE } from 'vuex-toast'
+import VueEasyLightbox from 'vue-easy-lightbox'
 
 import HeroHeader from '@/components/header'
-import HeroLoading from '@/components/loading'
+import LoadingOverlay from '@/components/loading'
 
-import { MoreVerticalIcon, Trash2Icon } from 'vue-feather-icons'
+import { MoreVerticalIcon, Trash2Icon, XCircleIcon } from 'vue-feather-icons'
 
 export default {
   components: {
+    VueEasyLightbox,
     HeroHeader,
-    HeroLoading,
+    LoadingOverlay,
     Trash2Icon,
-    MoreVerticalIcon
+    MoreVerticalIcon,
+    XCircleIcon
   },
   data () {
     return {
-      isLoading: false
+      isLoading: false,
+      isImagePreview: false,
+      imageToPreview: ''
     }
   },
   mounted () {
@@ -58,6 +63,16 @@ export default {
         .finally(() => {
           this.isLoading = false
         })
+    },
+    previewImage (image) {
+      this.imageToPreview = image
+
+      this.isImagePreview = true
+    },
+    closeImagePreview () {
+      this.imageToPreview = ''
+
+      this.isImagePreview = false
     }
   }
 }
