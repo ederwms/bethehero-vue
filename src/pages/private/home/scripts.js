@@ -1,4 +1,4 @@
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions, mapGetters, mapMutations } from 'vuex'
 import { ADD_TOAST_MESSAGE } from 'vuex-toast'
 import VueEasyLightbox from 'vue-easy-lightbox'
 
@@ -24,6 +24,7 @@ export default {
     }
   },
   mounted () {
+    this.CLEAR_INCIDENTS()
     this.isLoading = true
 
     this.actionGetAllIncidents()
@@ -44,6 +45,9 @@ export default {
     ...mapActions({
       addToast: ADD_TOAST_MESSAGE
     }),
+    ...mapMutations([
+      'CLEAR_INCIDENTS'
+    ]),
     deleteIncident (idincident) {
       this.isLoading = true
 
