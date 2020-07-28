@@ -50,7 +50,7 @@
           id="inputUpload"
           type="file"
           accept="image/jpeg, image/png"
-          @input="handleFileUpload"
+          @change="handleFileUpload"
         >
 
         <label
