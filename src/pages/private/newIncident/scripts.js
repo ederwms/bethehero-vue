@@ -43,7 +43,6 @@ export default {
       addToast: ADD_TOAST_MESSAGE
     }),
     handleFileUpload (e) {
-      alert('Entrou na função')
       this.fileError = false
       const uploadedFile = e.target.files[0]
 
