@@ -32,7 +32,7 @@ const actions = {
         return Promise.resolve(response.data)
       })
       .catch((e) => {
-        return Promise.reject(e.response.data)
+        return Promise.reject(e.data)
       })
   },
   actionCreateIncident (_, incident) {
@@ -41,17 +41,18 @@ const actions = {
         return Promise.resolve(response.data)
       })
       .catch((e) => {
-        return Promise.reject(e.response.data)
+        return Promise.reject(e.data)
       })
   },
   actionDeleteIncident ({ commit }, id) {
     return incidentApi.deleteIncident(id)
       .then((response) => {
         commit('DELETE_INCIDENT', id)
+
         return Promise.resolve(response.data)
       })
       .catch((e) => {
-        return Promise.reject(e.response.data)
+        return Promise.reject(e.data)
       })
   }
 }
