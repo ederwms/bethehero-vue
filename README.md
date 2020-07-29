@@ -44,11 +44,11 @@ Este projeto foi desenvolvido com a finalidade de aprofundar meus conhecimentos 
   <img alt="Login screen" src="src/assets/screenshots/mobile/login-bth-mobile.png">
 
   <img alt="Register screen" src="src/assets/screenshots/mobile/cadastro-bth-mobile.png">
-  
+
   <img alt="Incident screen (empty)" src="src/assets/screenshots/mobile/incident-screen-empty-mobile.png">
 
   <img alt="Incident screen" src="src/assets/screenshots/mobile/incident-screen-populated-mobile.png">
-  
+
   <img alt="New incident screen" src="src/assets/screenshots/mobile/new-incident-screen-mobile.png">
 </p>
 
